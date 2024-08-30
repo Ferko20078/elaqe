@@ -117,6 +117,7 @@ input[type="checkbox"]{
 .content{
     width: 100%;
     display: flex;
+   
     
     
 }
@@ -131,12 +132,7 @@ input[type="checkbox"]{
     width: 500px;
     height: 500px;
 }
-.contact{
-    margin-top: 120px;
-    margin-left: 70px;
-    width: 55%;
 
-}
 .esas{
 font-size: 60px;
 color: wheat;
@@ -148,51 +144,29 @@ color: wheat;
 .hr{
     color: #111;
 }
-@media only screen and (max-width: 760px){
-            .content{
-                display: grid;
-                grid-template-columns: repeat(1,1fr);
-               
-                
-                
-       }
-}
+
 @media only screen and (max-width: 760px){
             .resm{
-                width: 300px;
-                height: 300px;
-               margin-left: 30px;
-               margin-top: 20px;
+              
+               display: none;
                 
                 
        }
 }
-@media only screen and (max-width: 760px){
-            .esas{
-                font-size: 29px;
-            margin-left: 0;
-            
-                
-                
-       }
-}
-@media only screen and (max-width: 760px){
-            .son{
-                font-size: 17px;
-                margin-top: 0;
-                
-                
-       }
-}
-@media only screen and (max-width: 760px){
+
+
+@media only screen and (max-width: 2000px){
             .contact{
-                margin-left: 10px;
-                margin-top: 0;
-                width: 350px;
+                justify-content: left;
+                text-align: left;
+                width: 100px;
+                margin-left: 1px;
                 
                 
        }
 }
+
+
 
 
 
@@ -440,6 +414,41 @@ img{
 .button-container button:hover {
     background-color: red;
 }
+input{
+  padding: 10px 10px;
+  border-radius: 20px;  
+  margin-top: 10px;
+  width: 85%; 
+}
+.contact{
+    margin-top: 100px;
+    margin-left: 5px;
+    width: 400px;
+    height: 400px;
+    background-color:#191923;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+
+
+}
+.mz{
+  padding-bottom: 150px;
+
+  
+}
+.btn{
+  padding: 10px 10px;
+  border-radius: 14px;
+  cursor: pointer;
+  width: 85%;
+
+}
+.btn :hover{
+  background-color: #191923;
+  color: white;
+}
+
 </style>
 
 </head>
@@ -471,8 +480,27 @@ img{
 
         </div>
         
-        <div class="contact">
-            <span class="esas">Əlaqə üçün.</span><br><br><hr class="hr"><br><span class="son">Aşağıdakı vasitələrdən istifadə edə bilərsiz:</span><br><br><span class="son"><i class="fa-regular fa-envelope"></i>E-mail: fm899705@gmail.com</span><br><span class="son"><i class="fa-regular fa-envelope"></i>Mail: fmmmmdli2007@mail.ru</span>
+        <div class="contact"><br>
+          <form action="https://api.web3forms.com/submit" method="POST">
+
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="1dd9e835-dd69-4405-a457-dfe2441b7f37">
+        
+            <!-- Form Inputs. Each input must have a name="" attribute -->
+            <input type="text" name="name" placeholder="Adınız" required><br>
+            <input type="email" name="E-mail"  placeholder="E-poçt ünvanı"required><br>
+            <input class="mz" type="text" name="Mövzu"  placeholder="Mövzu..." required>
+           
+        
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        
+            <!-- Custom Confirmation / Success Page -->
+            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+        <br>
+        
+           <br> <button class="btn" type="submit">Göndər</button>
+        </form>
         </div>
     </div>
 
